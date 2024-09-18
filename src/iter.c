@@ -1,5 +1,13 @@
 #include "../include/iter.h"
 
+int countValuesIter(int *a, unsigned int n, int value) {
+    int res = 0;
+    for(unsigned int i=0; i<n; i++)
+        if(a[i]==value)
+            res += 1;
+    return res;
+}
+
 INT findMinimumDifferenceIter(int *a, unsigned int n) {
     if(n<2)
         return -1;

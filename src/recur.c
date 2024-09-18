@@ -1,5 +1,10 @@
 #include "../include/recur.h"
 
+int countValuesRecur(int *a, unsigned int n, int value) {
+    if(n<=0) return 0;
+    return countValuesRecur(a, n-1, value)+(a[n-1]==value);
+}
+
 INT findMinimumDifferenceRecur(int *a, unsigned int n) {
     if(n<=2)
         return llabs((INT)a[1]-a[0]);
