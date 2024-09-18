@@ -27,6 +27,18 @@ INT findMinimumDifferenceIter(int *a, unsigned int n) {
     return mn;
 }
 
+int countDigitsIter(int value, int base, int digit) {
+    int res = 0;
+    while(value>0) {
+        if(value%base==digit)
+            res += 1;
+        value /= base;
+    }
+    if(res==0 && digit==0)
+        res += 1;
+    return res;
+}
+
 void printAliquotsIter(int value) {
     if(value!=0) {
         if(value<0)

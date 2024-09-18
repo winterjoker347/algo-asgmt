@@ -26,6 +26,11 @@ INT findMinimumDifferenceRecur(int *a, unsigned int n) {
     return mn;
 }
 
+int countDigitsRecur(int value, int base, int digit) {
+    if(value<=0) return (value==digit);
+    return countDigitsRecur(value/base, base, digit)+(value%base==digit);
+}
+
 void printAliquotsRecur(int value, int low, int high) {
     if(low>high)
         return;
