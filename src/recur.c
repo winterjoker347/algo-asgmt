@@ -48,3 +48,9 @@ int countSymmetricPairsRecur(int *a, unsigned int low, unsigned int high) {
     if(low==high) return 1;
     return countSymmetricPairsRecur(a, low+1, high-1)+(a[low]==a[high]);
 }
+
+int isArithmeticSequenceRecur(int *a, unsigned int n, int diff) {
+    if(n<=1) return 1;
+    if(a[n-1]-a[n-2]!=diff) return 0;
+    return isArithmeticSequenceRecur(a, n-1, diff);
+}

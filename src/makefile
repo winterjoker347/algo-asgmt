@@ -1,7 +1,7 @@
 # Variables
 CC = gcc
 CFLAGS = -c
-SRC = iter.c recur.c tests/test_count_sym_pairs.c
+SRC = iter.c recur.c tests/test_is_arithmetic_seq.c
 OBJ = $(SRC:.c=.o)
 EXEC = test
 

@@ -72,3 +72,13 @@ int countSymmetricPairsIter(int *a, unsigned int n) {
             res += 1;
     return res;
 }
+
+int isArithmeticSequenceIter(int *a, unsigned int n) {
+    if(n<=2)
+        return 1;
+    int diff = a[n-1]-a[n-2];
+    for(int i=1; i<n-1; i++)
+        if(a[i]-a[i-1]!=diff)
+            return 0;
+    return 1;
+}
