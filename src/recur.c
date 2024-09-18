@@ -42,3 +42,9 @@ void printAliquotsRecur(int value, int low, int high) {
     } else
         printAliquotsRecur(value, low+1, value/(low+1));
 }
+
+int countSymmetricPairsRecur(int *a, unsigned int low, unsigned int high) {
+    if(low>high) return 0;
+    if(low==high) return 1;
+    return countSymmetricPairsRecur(a, low+1, high-1)+(a[low]==a[high]);
+}

@@ -62,3 +62,13 @@ void printAliquotsIter(int value) {
         printf("invalid argument");
     printf("\n");
 }
+
+int countSymmetricPairsIter(int *a, unsigned int n) {
+    int res = 0;
+    if(n%2==1)
+        res += 1;
+    for(unsigned int i=0; i<n/2; i++)
+        if(a[i]==a[n-i-1])
+            res += 1;
+    return res;
+}
