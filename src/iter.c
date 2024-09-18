@@ -1,5 +1,16 @@
 #include "../include/iter.h"
 
+INT findMinimumDifferenceIter(int *a, unsigned int n) {
+    if(n<2)
+        return -1;
+    INT mn = llabs((INT)a[1]-a[0]);
+    for(unsigned int i=2; i<n; i++)
+        for(unsigned int j=0; j<i; j++)
+            if(mn>llabs((INT)a[j]-a[i]))
+                mn = llabs((INT)a[j]-a[i]);
+    return mn;
+}
+
 void printAliquotsIter(int value) {
     if(value!=0) {
         if(value<0)

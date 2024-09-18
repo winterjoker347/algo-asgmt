@@ -1,5 +1,15 @@
 #include "../include/recur.h"
 
+INT findMinimumDifferenceRecur(int *a, unsigned int n) {
+    if(n<=2)
+        return llabs((INT)a[1]-a[0]);
+    INT mn = findMinimumDifferenceRecur(a, n-1);
+    for(unsigned int i=0; i<=n-2; i++)
+        if(mn>llabs((INT)a[n-1]-a[i]))
+            mn = llabs((INT)a[n-1]-a[i]);
+    return mn;
+}
+
 void printAliquotsRecur(int value, int low, int high) {
     if(low>high)
         return;
