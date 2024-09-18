@@ -8,6 +8,14 @@ int countValuesIter(int *a, unsigned int n, int value) {
     return res;
 }
 
+int hasSameValuesIter(int *a, unsigned int n) {
+    for(unsigned int i=1; i<n; i++)
+        for(unsigned int j=0; j<i; j++)
+            if(a[i]==a[j])
+                return 1;
+    return 0;
+}
+
 INT findMinimumDifferenceIter(int *a, unsigned int n) {
     if(n<2)
         return -1;

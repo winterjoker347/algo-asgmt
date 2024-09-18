@@ -5,6 +5,17 @@ int countValuesRecur(int *a, unsigned int n, int value) {
     return countValuesRecur(a, n-1, value)+(a[n-1]==value);
 }
 
+int hasSameValuesRecur(int *a, unsigned int n) {
+    if(n<2) return 0;
+    if(n==2) return (a[1]==a[0]);
+    if(hasSameValuesRecur(a, n-1))
+        return 1;
+    for(unsigned int i=0; i<=n-2; i++)
+        if(a[i]==a[n-1])
+            return 1;
+    return 0;
+}
+
 INT findMinimumDifferenceRecur(int *a, unsigned int n) {
     if(n<=2)
         return llabs((INT)a[1]-a[0]);
