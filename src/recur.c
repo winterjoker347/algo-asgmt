@@ -60,3 +60,17 @@ INT checkTotalRecur(int *a, int n, INT sum, INT total) {
     if(n<=0) return 0;
     return checkTotalRecur(a, n-1, sum+a[n-1], total);
 }
+
+int countDistinctValuesRecur(int *a, int n) {
+    if(n<=0) return 0;
+    int count = countDistinctValuesRecur(a, n-1);
+    int j = 0;
+    while(j<n-1) {
+        if(a[j]==a[n-1])
+            break;
+        j++;
+    }
+    if(j==n-1)
+        count++;
+    return count;
+}

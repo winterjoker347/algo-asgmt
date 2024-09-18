@@ -1,7 +1,7 @@
 # Variables
 CC = gcc
 CFLAGS = -c
-SRC = iter.c recur.c tests/test_check_total.c
+SRC = iter.c recur.c tests/test_count_distinct_values.c
 OBJ = $(SRC:.c=.o)
 EXEC = test
 
