@@ -13,5 +13,6 @@ int hasSameValuesIter(int *, unsigned int);
 int countDigitsIter(int, int, int);
 int countSymmetricPairsIter(int *, unsigned int);
 int isArithmeticSequenceIter(int *, unsigned int);
+int checkTotalIter(int *, unsigned int, INT);
 
 #endif

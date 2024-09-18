@@ -13,5 +13,6 @@ int hasSameValuesRecur(int *, unsigned int);
 int countDigitsRecur(int, int, int);
 int countSymmetricPairsRecur(int *, unsigned int, unsigned int);
 int isArithmeticSequenceRecur(int *, unsigned int, int);
+INT checkTotalRecur(int *, int, INT, INT);
 
 #endif

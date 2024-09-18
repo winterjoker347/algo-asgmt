@@ -82,3 +82,12 @@ int isArithmeticSequenceIter(int *a, unsigned int n) {
             return 0;
     return 1;
 }
+
+int checkTotalIter(int *a, unsigned int n, INT total) {
+    if(n<=0)
+        return total==0;
+    INT sum = 0;
+    for(unsigned int i=0; i<n; i++)
+        sum += a[i];
+    return sum==total;
+}

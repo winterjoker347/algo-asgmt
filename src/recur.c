@@ -54,3 +54,9 @@ int isArithmeticSequenceRecur(int *a, unsigned int n, int diff) {
     if(a[n-1]-a[n-2]!=diff) return 0;
     return isArithmeticSequenceRecur(a, n-1, diff);
 }
+
+INT checkTotalRecur(int *a, int n, INT sum, INT total) {
+    if(sum==total) return 1;
+    if(n<=0) return 0;
+    return checkTotalRecur(a, n-1, sum+a[n-1], total);
+}
