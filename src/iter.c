@@ -91,3 +91,18 @@ int checkTotalIter(int *a, unsigned int n, INT total) {
         sum += a[i];
     return sum==total;
 }
+
+int countDistinctValuesIter(int *a, int n) {
+    int count = 0;
+    for(int i=0; i<n; i++) {
+        int j = 0;
+        while(j<i) {
+            if(a[j]==a[i])
+                break;
+            j++;
+        }
+        if(i==j)
+            count++;
+    }
+    return count;
+}
