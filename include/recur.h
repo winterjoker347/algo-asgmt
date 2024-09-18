@@ -11,5 +11,6 @@ INT findMinimumDifferenceRecur(int *, unsigned int);
 int countValuesRecur(int *, unsigned int, int);
 int hasSameValuesRecur(int *, unsigned int);
 int countDigitsRecur(int, int, int);
+int countSymmetricPairsRecur(int *, unsigned int, unsigned int);
 
 #endif

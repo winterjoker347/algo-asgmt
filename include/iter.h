@@ -11,5 +11,6 @@ INT findMinimumDifferenceIter(int *, unsigned int);
 int countValuesIter(int *, unsigned int, int);
 int hasSameValuesIter(int *, unsigned int);
 int countDigitsIter(int, int, int);
+int countSymmetricPairsIter(int *, unsigned int);
 
 #endif
